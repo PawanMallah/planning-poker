@@ -1,0 +1,27 @@
+<div class="HomeDiv"> 
+   <b><span style="color:red">{{errorMsg}}</span></b>
+    <table class="joinRoom">
+        <tr>
+            <td>
+                Enter Room Code :- 
+            </td>
+            <td>
+                <input type="text" [(ngModel)]="roomCode" class="InputBox">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Enter Your Name :- 
+            </td>
+            <td>
+                <input type="text" [(ngModel)]="name" class="InputBox">
+            </td>
+        </tr>
+        <tr>
+            <td colspan='2'>
+                <button (click)="joinRoom()" class="Btn" style="width:150px">Join</button>
+            </td>
+        </tr>
+    </table>
+
+</div>

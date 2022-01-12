@@ -1,0 +1,55 @@
+.daybtnstyle
+{
+    border:1px solid black;
+    width:30px;
+    text-align: center;
+    padding: 5px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.DaysDiv
+{
+    display: block;
+    width: 300px;
+    padding: 10px;
+    height: 150px;
+}
+
+.DaysDiv .daybtnstyle
+{
+    float: left;
+    margin: 5px;
+}
+.chatDiv
+{
+    border: 1px solid black;
+    width: 300px;
+    height: 350px;
+    border-radius: 5px;
+    overflow-y: scroll;
+}
+.Msg
+{
+    border: 1px solid black;
+    padding: 2px;
+    margin-right: 5px;
+}
+.ShowPoint{
+    border-radius: 5px;
+    background-color: gray;
+    color: gray;
+    
+}
+.NamePointTable tr td{
+    padding-left:20px;
+    padding-right: 20px;
+    width: 30px;
+    height: 35px;
+    
+}
+.PlaningPokerTable tr td
+{
+    padding-left: 10px;
+    padding-right: 10px;
+}

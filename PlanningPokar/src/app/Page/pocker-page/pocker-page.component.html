@@ -1,0 +1,143 @@
+<p style="font-size:30px">
+    {{RoomCode}}
+</p>
+<table border="0" class="PlaningPokerTable">
+    <tr>
+        <td>
+            Artifact Number
+        </td>
+        <td>
+            <input type="text" [(ngModel)]="ArtifactNumber" class="InputBox" [disabled]="!isAdmin" (ngModelChange)="changeArtifact()">
+        </td>    
+        <td rowspan="5" style="text-align: left;">
+            <table>
+                <tr>
+                    <td colspan="2">
+                        <div class="chatDiv" id="ChatMessage">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input id='msgTextBox' type='text' [(ngModel)]="Message" class="InputBox" (keydown)="KeyDown()" style="width:100%;text-align: left;border:1px solid black">
+                    </td>
+                    <td>
+                        <div id='sendBtn' (click)="SendMessage()" style="height:30px;background-color: transparent; border: 0px solid black;"><img src='https://www.pngarts.com/files/2/Send-PNG-Image.png' width="35px" height="35px" /></div>
+                    </td>
+
+                </tr>
+            </table>
+                
+                
+                
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            <button (click)="BrowseArtifactClick()" class="Btn" style="width: 120px;height: 30px;">Browse Artifact</button>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            <div class="DaysDiv">
+                <div (click)="DayClick(0.5,'btn0')" id="btn0" class="daybtnstyle"> 
+                    0.5
+                </div>
+                <div (click)="DayClick(1.0,'btn1')" id="btn1" class="daybtnstyle">
+                    1.0
+                </div>
+                <div (click)="DayClick(1.5,'btn2')" id="btn2" class="daybtnstyle">
+                    1.5
+                </div>
+                <div (click)="DayClick(2.0,'btn3')" id="btn3" class="daybtnstyle">
+                    2.0
+                </div>
+                <div (click)="DayClick(2.5,'btn4')" id="btn4" class="daybtnstyle">
+                    2.5
+                </div>
+                <div (click)="DayClick(3.0,'btn5')" id="btn5" class="daybtnstyle">
+                    3.0
+                </div>
+                <div (click)="DayClick(3.5,'btn6')" id="btn6" class="daybtnstyle">
+                    3.5
+                </div>
+                <div (click)="DayClick(4.0,'btn7')" id="btn7" class="daybtnstyle">
+                    4.0
+                </div>
+                <div (click)="DayClick(4.5,'btn8')" id="btn8" class="daybtnstyle">
+                    4.5
+                </div>
+                <div (click)="DayClick(5.0,'btn9')" id="btn9" class="daybtnstyle">
+                    5.0
+                </div>
+                <div (click)="DayClick(5.5,'btn10')" id="btn10" class="daybtnstyle">
+                    5.5
+                </div>
+                <div (click)="DayClick(6.0,'btn11')" id="btn11" class="daybtnstyle">
+                    6.0
+                </div>
+                <div (click)="DayClick(6.5,'btn12')" id="btn12" class="daybtnstyle">
+                    6.5
+                </div>
+                <div (click)="DayClick(7.0,'btn13')" id="btn13" class="daybtnstyle">
+                    7.0
+                </div>
+                <div (click)="DayClick(7.5,'btn14')" id="btn14" class="daybtnstyle">
+                    7.5
+                </div>
+            </div>
+            
+        </td>
+    </tr>
+    <tr *ngIf="isAdmin">
+        <td >
+            <button (click)="ShowPointCall()" class="Btn" style="width: 100px;height: 30px;">
+                Show Point
+            </button>
+        </td>
+        <td >
+            <button (click)="ClearPoint()" class="Btn" style="width: 100px;height: 30px;">
+                Clear Point
+            </button>
+        </td>
+        
+    </tr>
+    <tr style="margin-top: 10px;">
+        <td colspan="2">
+            <table class="NamePointTable">
+                <tr>
+                    <th>
+                        Name
+                    </th>
+                    <th>
+                        Point
+                    </th>
+                </tr>
+                <tr *ngFor="let d of users">
+                    <td>
+                        {{d.Name}}
+                    </td>
+                    <td class='ShowPoint'>
+                        {{d.Point}}
+                    </td>
+                    <td *ngIf="d.Point" >
+                        <img src="https://cdn3.iconfinder.com/data/icons/flat-actions-icons-9/792/Tick_Mark_Dark-512.png" width="23px" height="30px">
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    
+</table>
+
+
+
+
+
+
+
+
+
+<br>
+<br>
+<br>

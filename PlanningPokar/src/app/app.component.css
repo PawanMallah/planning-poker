@@ -1,0 +1,22 @@
+body{
+    align-items: center;
+    text-align: center;
+    align-content: center;
+    margin: auto;
+}
+.outlet
+{
+    
+    width: fit-content;
+    margin: auto;
+}
+
+
+.Header
+{
+    font-size: 30px; 
+    border:1px solid black;
+    padding:10px;
+    background-image: linear-gradient(to bottom right,#ccc8c8,white,#d1cfcf);
+    border-radius: 5px;
+}
